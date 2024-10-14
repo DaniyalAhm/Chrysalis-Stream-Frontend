@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  gap: 20px; /* Adds space between buttons */
+  padding-left: 20px; /* Adds some padding on the left */
+  position: relative; /* To position the logo inside the container */
+  margin-left: 10%;
+
+}
+
+.teacherLogin, .studentLogin {
+  /* Style for both Teacher and Student buttons */
+  background-color: #cf5610; /* Blue background color */
+  color: white; /* White text color */
+  border: none; /* Remove default borders */
+  padding: 8px 18px; /* Padding for a larger button size */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 14px; /* Adjusted font size */
+  cursor: pointer; /* Pointer cursor on hover */
+
+
+
+}
+
+.logo {
+  position: absolute;
+  margin-right: 20%; /* Adds margin between the logo and buttons */
+  bottom:85%;
+  right: 65%;
+  width: 250px; /* Adjust the width if necessary */
+}

@@ -1,0 +1,143 @@
+/* Container for the entire page */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 500px; /* More responsive */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Form container */
+.form {
+    background-color: rgb(44, 42, 42);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+/* Title inside the form */
+.title {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Input group */
+.inputGroup {
+    margin-bottom: 16px;
+}
+
+/* Labels for inputs */
+.label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+/* Styling for the input fields */
+.input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+    outline: none;
+    transition: border-color 0.3s;
+    font-size: 14px;
+}
+
+/* Input focus style */
+.inputFocus:focus {
+    border-color: #007bff;
+}
+
+/* Submit button */
+.button {
+    width: 100%;
+    padding: 12px;
+    background: #cf5610;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 20px;
+}
+
+/* Button hover state */
+.buttonHover:hover {
+    background: #9e3e07;
+}
+
+/* Forgot password link */
+.forgotPassword {
+    font-size: 12px;
+    color: #007bff;
+    text-align: right;
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+.forgotPasswordHover:hover {
+    text-decoration: underline;
+}
+
+/* Social media login section */
+.socialLogin {
+    margin-top: 20px;
+}
+
+.socialLoginP {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.socialLoginA {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.socialLoginAHover:hover {
+    color: #007bff;
+}
+
+/* Sign-up section */
+.signupLink {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.signupLinkA {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signupLinkAHover:hover {
+    text-decoration: underline;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
