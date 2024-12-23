@@ -2,26 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 70px; /* Adds space between buttons */
   padding-left: 20px; /* Adds some padding on the left */
   position: absolute; /* To position the logo inside the container */
   align-items: center; /* Vertically centers items */
-  left: 10%;
+  left:7%;
   top: 20%;
 
 }
 
 .button {
   /* Style for both Teacher and Student buttons */
+  display: flex;
   background-color: #000000; /* Blue background color */
   color: white; /* White text color */
+  font-size: larger;
   border: none; /* Remove default borders */
-  border-radius: 8px; /* Rounded corners */
+  border-radius: 300px; /* Rounded corners */
   font-size: 14px; /* Adjusted font size */
   cursor: pointer; /* Pointer cursor on hover */
-  width: 150px; /* Adjusted width */
-  padding: 30px 25px; /* Padding for a larger button size */
-  margin-bottom: -500px;
+  width: 200px; /* Adjusted width */
+  height: 100px;
+  padding: 15px 30px; /* Padding for a larger button size */
 }
 
 

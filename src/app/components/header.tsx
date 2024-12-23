@@ -10,16 +10,25 @@ import { FormControlLabel } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useState } from 'react';
 import Signup from './signUp';
+import SignIn from './signIn';
+import Forgot_Id from './forgot_id' ;
 export default function BasicButtons() {
 
   const [checked, setChecked] = useState(false);
   const [checked2, setChecked2] = useState(false);
+  const [checked3, setchecked3] = useState(false);
 
   function handleClick() {
     setChecked((prev) => !prev);
+    
   }
   function handleClick2() { 
     setChecked2((prev) => !prev);
+  }
+
+
+  function handleClick3() { 
+    setchecked3((prev) => !prev);
   }
 
 
@@ -28,69 +37,58 @@ export default function BasicButtons() {
     <div>
     <div className={styles.container}>
 
-        <Button variant="contained" data-id="teacherLogin" className={styles.button} onClick={handleClick2}  >Sign In </Button>
-        <Grow in={checked2}>
-          <Box
-            sx={{
-              transformOrigin: '0 0 0',
-              top: "5%",
-              left: 0,
-              display: 'flex',
-            }}
-          >
-            <Signup />
-          </Box>
-        </Grow>
 
-
-      <Button variant="contained"  data-id="signUp" className={styles.button} onClick={handleClick} >Sign up</Button>
+       <Button variant="contained"
+       sx={{display: 'flex', transition: 'margin-top 0.3s ease',
+        marginBottom: checked ? "50px": "0"}}
+       
+       data-id="signIn" className={styles.button} onClick={handleClick} >Sign in</Button>
 
         <Grow in={checked}>
-          <Box
-            sx={{
-              display: 'flex',
-              transition: 'margin-top 0.3s ease', // Smooth transition
-              top: "5%",
+        <Box sx={{ display: 'flex', transition: 'margin-top 0.5s ease', // Smooth transitiontop: "5%",
+      
+        }}>
+          <SignIn />
 
-              marginTop: checked2 ? '-200px' : '0px', // Move down when Grow is active
-
-            }}
-          >
-            <Signup />
-          </Box>
+        </Box>
         </Grow>
 
+        <Button variant="contained" 
+          sx={{display: 'flex', transition: 'margin-top 0.5s ease',
+            marginTop: checked ? "50px": "-200px",
+            marginBottom: checked2  ? "20px": "20px"}}
+        
+        data-id="signUp" className={styles.button} onClick={handleClick2} >Sign up</Button>
 
-
-
-
-    <Box sx={{ 
-       display:"flex", 
-       justifyContent: 'center', // Horizontal alignment
-       alignItems: 'center',    // Vertical alignment    
-      transition: 'margin-top 0.3s ease', // Smooth transition
-      marginTop: checked ? '-30px' : '0', // Move down when Grow is active
-
+        <Grow in={checked2} >
+        <Box sx={{ display: 'flex', transition: 'margin-top 0.5s ease', // Smooth transitiontop: "5%",
       
-      }}>
-      <Link href ={{
-            pathname: `/resetPassword`,
-            query: {
-              id: "signup", // pass the id 
-            },
-          }}  passHref     >
 
-      <Button variant="contained"  data-id="studentLogin" className={styles.button}>Forgot Username/Password</Button>
-      </Link>
-    </Box>
-  
+        }}>
+          <Signup />
+
+        </Box>
+        </Grow>
+
+        <Button variant="contained" 
+          sx={{display: 'flex', transition: 'margin-top 0.5s ease',
+            marginTop: checked2? "50px": "-300px",
+            marginBottom: checked2  ? "20px": "20px"}}
+            data-id="forgot" className={styles.button} onClick={handleClick3} >Forgot Username/Password</Button>
+      
+      <Grow in={checked3} >
+        <Box sx={{ display: 'flex', transition: 'margin-top 0.5s ease', // Smooth transitiontop: "5%",
+      
+
+        }}>
+          <Forgot_Id />
+
+        </Box>
+
+        </Grow>
       </div>
 
-      <img
-        className={styles.logo}
-        src="/images/logo.png"
-        alt="Logo"
-      />
+
       </div>
   );
 }

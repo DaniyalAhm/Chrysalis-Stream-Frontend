@@ -12,7 +12,9 @@ import { Button } from '@mui/material';
 
 export default function Signup() {
   return (
-    <Box component="section" sx={{ p: 2, backgroundColor:"#f3d4c7", display:'flex', flexDirection:'column', gap:"20px", borderRadius:"10px", height: "20%" }}>
+    <Box component="section" sx={{ p: 2, backgroundColor:"#f3d4c7", display:'flex', flexDirection:'column', gap:"20px", borderRadius:"10px", height: "20%"
+      
+     }}>
      
      <TextField sx={{backgroundColor:'#ffffff'}}
           required
@@ -36,7 +38,6 @@ export default function Signup() {
         />
  
         <TextField sx={{backgroundColor:'#ffffff'}} required id="outlined-search" label="Search Intitution" type="search" />
-        <Button variant="contained" sx={{backgroundColor:'#000000'}}>Sign Up</Button>
 
  
      

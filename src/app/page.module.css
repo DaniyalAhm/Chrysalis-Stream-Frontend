@@ -28,6 +28,15 @@
   gap: 32px;
   grid-row-start: 2;
 }
+
+.logo {
+  position: absolute;
+  margin-right: 20%; /* Adds margin between the logo and buttons */
+  bottom:85%;
+  left: 7%;
+  width: 250px; /* Adjust the width if necessary */
+  filter: invert(100);
+}
 page
 .main ol {
   font-family: var(--font-geist-mono);
@@ -82,6 +91,16 @@ a.primary {
 a.secondary {
   border-color: var(--gray-alpha-200);
   min-width: 180px;
+}
+
+.homepage_photo {
+  width: 100%;
+  position: absolute;
+  left: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
 }
 
 .footer {
