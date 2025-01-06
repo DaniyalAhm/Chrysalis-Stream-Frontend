@@ -51,20 +51,8 @@ export default function Video_cards() {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 , backgroundColor:'#383838', color:'white'}}>
-      <CardHeader
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon sx={{color:'white'}}/>
-          </IconButton>
-        }
-        title="Insert Title Here "
-        subheader="Published: September 14, 2016"
-        sx={{color:'white'}}
-        subheaderTypographyProps={{ style: { color: 'white' } }}  
+    <Card sx={{ maxWidth: 245 , backgroundColor:'black', color:'white'}}>
 
-
-      />
       <CardMedia
         component="img"
         height="194"
@@ -73,33 +61,15 @@ export default function Video_cards() {
       />
       <CardContent>
         <Typography variant="body2" sx={{ color: 'white' }}>
-          Insert Description here
+        Insert Title here
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
    
        
-        <ExpandMore
-        sx={{color:'white'}}
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
+
       </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-        
-          <Typography sx={{ marginBottom: 2 , color:'white'}}>
-              Students Assigned To:
-          
-          </Typography>
-         
-       
-        </CardContent>
-      </Collapse>
+
     </Card>
   );
 }

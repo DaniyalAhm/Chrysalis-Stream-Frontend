@@ -1,40 +1,43 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-left: 20px; /* Adds some padding on the left */
-  position: absolute; /* To position the logo inside the container */
-  align-items: center; /* Vertically centers items */
-  left:7%;
-  bottom: 10%;
 
+body.no-scroll {
+  overflow: hidden;
 }
 
 .button {
   /* Style for both Teacher and Student buttons */
-  display: flex;
   background-color: #000000; /* Blue background color */
   color: white; /* White text color */
   font-size: larger;
   border: none; /* Remove default borders */
-  border-radius: 300px; /* Rounded corners */
   font-size: 14px; /* Adjusted font size */
   cursor: pointer; /* Pointer cursor on hover */
-  width: 200px; /* Adjusted width */
+  width: 100px; /* Adjusted width */
   height: 100px;
   padding: 15px 30px; /* Padding for a larger button size */
+  
+  border-color:white;
 }
 
 
 .homepage_photo {
   width: 100%;
   position: absolute;
+  top:.0001em;
   left: 30%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
+}
+.videos{
+
+  position:absolute;
+  left:30%;
+  top:50%;
 
 }
+
+
+
 
 .logo {
   position: absolute;
