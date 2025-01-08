@@ -21,21 +21,13 @@ export default function BasicButtons() {
       <Link href ={{
             pathname: `/login`,
             query: {
-              id: "Teacherlogin", // pass the id 
+              id: "login", // pass the id 
             },
           }} passHref     >
-        <Button variant="contained" data-id="teacherLogin" className={styles.teacherLogin} sx={{backgroundColor:'#cf5610'} } >Teacher Login</Button>
+        <Button variant="contained" data-id="teacherLogin" className={styles.teacherLogin} sx={{backgroundColor:'#cf5610'} } >Login</Button>
 
       </Link>
-      <Link href ={{
-            pathname: `/login`,
-            query: {
-              id: "Studentlogin", // pass the id 
-            },
-          }}  passHref     >
 
-      <Button variant="contained"  data-id="studentLogin" className={styles.studentLogin}sx={{backgroundColor:'#cf5610'}}>Student Login</Button>
-      </Link>
 
 
       <Link href ={{
