@@ -10,12 +10,18 @@ import axios from 'axios'
 import { useRouter } from 'next/router';
 import {useState, useEffect} from 'react';
 import Button from '@mui/material/Button';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
 
 export default function Student(){
   const router = useRouter();
   const id = router.query;
-  const [profile, setProfile] = useState(null);
-  const [assignments, setAssignments] = useState([])
+  const [profile, setProfile] = useState([]);
+  const [courses, setCourses] = useState([])
   const [grade, setGrade]= useState("N/A");
 
   useEffect(() => {
@@ -24,39 +30,57 @@ export default function Student(){
   
     setProfile(response.data)
     console.log(response.data)
-    setAssignments(response.data.assignments);
-    setGrade(response.data.grade);
+    setCourses(response.data.Courses);
+    console.log(response.data.Courses)
+  
     }).catch(error =>
     {
       console.error(error);
       
-    }
+    })},[id]) 
 
-    )
+  function handleSubmit(e){
 
-
-    
-
-  },[id]) 
+    router.push(`/student/assignments/${id.id}-${e}`)
 
 
+  }
 
   return (
   <Box sx={{ marginTop:"20%", marginLeft:"10%"}}>
         <Grid container spacing={2}>
-        <Grid size={{ xs: 6, md: 2 }} offset={{ xs: 3, md: 0 }}
+        <Grid  offset={{ xs: 3, md: 0 }}
         
         >
         <h1> Your assignments: </h1>
-        <Stack >
-        {assignments.map((a, index) =>
-        
-        <Button variant="outlined" id={index}>{a}</Button>
-  
+ <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 450 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell align="right">Assignment</TableCell>
+            <TableCell align="right">Name</TableCell>
+            <TableCell align="right">Score</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {courses.map((course ) => (
 
-        )}
+            course.Assignments.map((row, index) =>  
 
-        </Stack>
+            <TableRow key={row.Assignment_id}  disabled={row.Score === "N/A"}>
+            
+              <TableCell align="right">
+              <Button onClick={(() => handleSubmit(row._id))} disabled={row.Score != "N/A"}> {row.Title ? row.Title : row.Assignment_id}</Button>
+              </TableCell>
+
+
+              <TableCell align="right">{course.Course_name}</TableCell>
+              <TableCell align="right">{row.Score}</TableCell>
+            </TableRow>
+         ) ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
         </Grid>
 
         <Grid size={{ xs: 4, md: 2 }} offset={{ md: 'auto' }}>
