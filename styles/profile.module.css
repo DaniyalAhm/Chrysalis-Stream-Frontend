@@ -16,7 +16,6 @@
     color: white; /* White text color */
     border: none; /* Remove default borders */
     padding: 8px 18px; /* Padding for a larger button size */
-    border-radius: 8px; /* Rounded corners */
     font-size: 14px; /* Adjusted font size */
     cursor: pointer; /* Pointer cursor on hover */
   
