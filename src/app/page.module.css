@@ -1,9 +1,6 @@
 .page {
-  --gray-rgb: 0, 0, 0;
-  --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
-  --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
-
-  --button-primary-hover: #383838;
+  background-color: #fff;
+  --button-primary-hover: #c0b4b4;
   --button-secondary-hover: #f2f2f2;
 
   display: grid;
@@ -18,11 +15,9 @@
 
 @media (prefers-color-scheme: dark) {
   .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
+    background-color: #ffffff;
+ 
+    --button-primary-hover: #726e6e;
     --button-secondary-hover: #1a1a1a;
   }
 }
@@ -34,6 +29,15 @@
   grid-row-start: 2;
 }
 
+.logo {
+  position: absolute;
+  margin-right: 20%; /* Adds margin between the logo and buttons */
+  bottom:85%;
+  left: 7%;
+  width: 250px; /* Adjust the width if necessary */
+  filter: invert(100);
+}
+page
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
@@ -89,6 +93,16 @@ a.secondary {
   min-width: 180px;
 }
 
+.homepage_photo {
+  width: 100%;
+  position: absolute;
+  left: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
+}
+
 .footer {
   grid-row-start: 3;
   display: flex;
@@ -124,7 +138,8 @@ a.secondary {
 }
 
 @media (max-width: 600px) {
-  .page {
+ page .page {
+    background-color: #ccc;
     padding: 32px;
     padding-bottom: 80px;
   }

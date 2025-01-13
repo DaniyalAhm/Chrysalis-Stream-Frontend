@@ -1,0 +1,49 @@
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.button {
+  /* Style for both Teacher and Student buttons */
+  background-color: #000000; /* Blue background color */
+  color: white; /* White text color */
+  font-size: larger;
+  border: none; /* Remove default borders */
+  font-size: 14px; /* Adjusted font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  width: 100px; /* Adjusted width */
+  height: 100px;
+  padding: 15px 30px; /* Padding for a larger button size */
+  
+  border-color:white;
+}
+
+
+.homepage_photo {
+  width: 100%;
+  position: absolute;
+  top:.0001em;
+  left: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+.videos{
+
+  position:absolute;
+  left:30%;
+  top:50%;
+
+}
+
+
+
+
+.logo {
+  position: absolute;
+  margin-right: 20%; /* Adds margin between the logo and buttons */
+  bottom:85%;
+  left: 7%;
+  width: 250px; /* Adjust the width if necessary */
+  filter: invert(100);
+}
