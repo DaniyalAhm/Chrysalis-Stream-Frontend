@@ -95,8 +95,8 @@ a.secondary {
 
 .homepage_photo {
   width: 100%;
-  position: absolute;
-  left: 30%;
+  height:200%;
+  margin-left: 70%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 

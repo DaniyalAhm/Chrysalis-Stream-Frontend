@@ -17,11 +17,20 @@ export default function BasicButtons() {
   const [checked, setChecked] = useState(false);
   const [checked2, setChecked2] = useState(false);
   const [checked3, setchecked3] = useState(false);
+  function handleChange(e) {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  }
+
+
 
   function handleClick() {
-    setChecked((prev) => !prev);
     
-  }
+    setChecked((prev) => !prev);
+
+    }
+    
+  
   function handleClick2() { 
     setChecked2((prev) => !prev);
   }
@@ -40,7 +49,10 @@ export default function BasicButtons() {
 
        <Button variant="contained"
        sx={{display: 'flex', transition: 'margin-top 0.3s ease',
-        marginBottom: checked ? "50px": "0"}}
+
+    
+
+        marginBottom: checked ? "20%": "5%"}}
        
        data-id="signIn" className={styles.button} onClick={handleClick} >Sign in</Button>
 
@@ -55,7 +67,7 @@ export default function BasicButtons() {
 
         <Button variant="contained" 
           sx={{display: 'flex', transition: 'margin-top 0.5s ease',
-            marginTop: checked ? "50px": "-200px",
+            marginTop: checked ? "50px": "-250px",
             marginBottom: checked2  ? "20px": "20px"}}
         
         data-id="signUp" className={styles.button} onClick={handleClick2} >Sign up</Button>
