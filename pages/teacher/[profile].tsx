@@ -14,7 +14,7 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
-
+import Stack from '@mui/material/Stack';
 
 import Box from '@mui/material/Box';
 
@@ -42,7 +42,10 @@ const columns_assign: GridColDef[] = [
 
 ];
 
+  const buttonStyles={backgroundColor:'black', maxWidth: '20%', margin:'5%',
+  borderRadius:'8px'
 
+  }
 
 
 const paginationModel = { page: 0, pageSize: 5 };
@@ -78,12 +81,11 @@ const paginationModel = { page: 0, pageSize: 5 };
 
     return (
 
-        <div>
-
+    <div>
+    <Box sx={{alignItems: 'center'}}>
      <h1>Welcome Back {name}</h1> 
-
-<div >
-    <Paper sx={{ height: 400, width: '100%' }}>
+    <img src={'/images/logo.png'} className={styles.logo}/>
+    <Paper sx={{ height: 400, width: '40%', marginTop:"2%", marginLeft:"5%"}}>
       <DataGrid
         rows={students}
         columns={columns}
@@ -97,34 +99,28 @@ const paginationModel = { page: 0, pageSize: 5 };
         sx={{ border: 0 }}
       />
 
-      
-      <Button variant="contained" onClick={() => setShowTable(true)} data-id="studentLogin" className={styles.button}sx={{backgroundColor:'#cf5610'}}>Assign Videos</Button>
-      
-
-
-
-
-
-
-            <Button variant="contained"  data-id="studentLogin" className={styles.button}sx={{backgroundColor:'#cf5610'}}>Add Student</Button>
-
-
-      <Button variant="contained"  data-id="studentLogin" className={styles.button}sx={{backgroundColor:'#cf5610'}}>View All Videos </Button>
     </Paper>
+    <Stack spacing={2} sx={{marginTop:"2%", marginLeft:"15%"}}> 
+      <Button variant="contained" onClick={() => setShowTable(true)} data-id="studentLogin" className={styles.button}sx={buttonStyles}>Assign Videos</Button>
+      
 
 
-            </div>
 
-        <div className={styles.container}>
-        <Link href ={{
-            pathname: `/assign_videos`,
-            query: {
-              id: "Teacherlogin", // pass the id 
-            },
-          }} passHref >
 
-      </Link>
-      <Backdrop
+
+
+            <Button variant="contained"  data-id="studentLogin" sx={buttonStyles}>Add Student</Button>
+
+
+      <Button variant="contained"  data-id="studentLogin" sx={buttonStyles}>View All Videos </Button>
+
+    </Stack>
+
+
+        </Box>
+
+    <img src="/images/temp_photo.jpg" className={styles.homepage_photo}  ></img>
+  <Backdrop
         
         open={showTable}
       >
@@ -145,12 +141,11 @@ const paginationModel = { page: 0, pageSize: 5 };
 
       </DataGrid>
 
-      <Button variant="contained" onClick={() => handleAssign()} data-id="studentLogin" className={styles.button}sx={{backgroundColor:'#cf5610'}}>Assign Videos</Button>
-      <Button variant="contained" onClick={() => setShowTable(false)} data-id="studentLogin" className={styles.button}sx={{backgroundColor:'#cf5610'}}>Close</Button>
+      <Button variant="contained" onClick={() => handleAssign()} data-id="studentLogin" className={styles.button}sx={buttonStyles}>Assign Videos</Button>
+      <Button variant="contained" onClick={() => setShowTable(false)} data-id="studentLogin" className={styles.button}sx={buttonStyles}>Close</Button>
       </Paper>
       </Backdrop>
 
-        </div>
         </div>
     )
 

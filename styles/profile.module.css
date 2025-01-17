@@ -1,20 +1,7 @@
-.container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100vh; /* Full viewport height */
-    gap: 20px; /* Adds space between buttons */
-    padding-left: 20px; /* Adds some padding on the left */
-    position: relative; /* To position the logo inside the container */
-    margin-left: 37%;
-  
-  }
+
   
   .button {
-    /* Style for both Teacher and Student buttons */
-    background-color: #cf5610; /* Blue background color */
-    color: white; /* White text color */
-    border: none; /* Remove default borders */
+      border: none; /* Remove default borders */
     padding: 8px 18px; /* Padding for a larger button size */
     font-size: 14px; /* Adjusted font size */
     cursor: pointer; /* Pointer cursor on hover */
@@ -22,31 +9,24 @@
   
   
   }
-  .cards {
-    position: absolute;
-    top:30%;
-    display: flex;
-    justify-content: flex-start; /* Align cards to the start */
-    flex-wrap: wrap; /* Wrap to next line if needed */
-    gap: 20px; /* Reduce space between cards */
-    padding: 5px;
-    margin-left: 20px;
-  }
+ 
   
-  
+.homepage_photo {
+  position:absolute;
+  bottom:.0005%; 
+  width: 50%;
+  height:100%;
+  margin-left: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+
+}
   
   .logo {
-    position: absolute;
-    margin-right: 20%; /* Adds margin between the logo and buttons */
-    bottom:85%;
-    right: 65%;
+    margin-left:2%;
+    margin-top:-5%;
     width: 250px; /* Adjust the width if necessary */
+    filter:invert(1);
   }
   
-  .table{
 
-    position: absolute;
-    top:20%;
-    left: 33%;
-    max-width: 50%;
-  }
